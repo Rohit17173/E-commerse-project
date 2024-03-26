@@ -1,0 +1,295 @@
+*{
+    padding: o;
+    margin: 0;
+}
+
+
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(20,50,6,0.4),rgba(2,2,5,0.4)),url(/img/background1.jpg);
+    background-position: center;
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    position: absolute; 
+}
+
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+}
+
+.nav-links ul li a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+
+.text-box{
+    width: 100%;
+    height: 70vh;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translate();
+    text-align: center;
+}
+
+
+
+
+.text-box h1{
+    font-size: 63px;
+}
+
+.hero-btn{
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 10px;
+    margin: 20px;
+    background: transparent;
+    cursor: pointer;
+} 
+
+.hero-btn:hover{
+    border: 2px solid #f44336;
+    background: #f44336;
+    transition: 1s;
+}
+
+/* login form */
+
+.form-body{
+    /* background: white; */
+    width: 350px;
+    height: 400px;
+    position: relative;
+    margin: 1% auto;
+    padding: 5px;
+    overflow: hidden;
+    /* border: 3px solid black; */
+}
+
+
+.input-grp{
+    top: 100px;
+    left: 20px;
+    position: absolute;
+    width: 280px;
+    transition: 0.5s;
+}
+
+.input-field{
+    font-size: 25px;
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0px;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+
+.submit-btn{
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: linear-gradient(to right, #ff105f, #ffad06);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+
+.check-box{
+    margin: 30px 10px 30px 0;
+}
+span{
+    color: #777;
+    font-size: 12px;
+    bottom: 68px;
+    position: absolute;
+}
+
+
+/*--------------------------------------------------------------
+# Our Team
+--------------------------------------------------------------*/
+.team .member {
+    margin-bottom: 20px;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  }
+  .team .member .member-img {
+    position: relative;
+    overflow: hidden;
+  }
+  .team .member .social {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 40px;
+    opacity: 0;
+    transition: ease-in-out 0.3s;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .team .member .social a {
+    transition: color 0.3s;
+    color: #111;
+    margin: 0 10px;
+    display: inline-flex;
+    align-items: center;
+    line-height: 0;
+  }
+  .team .member .social a i {
+    line-height: 0;
+  }
+  .team .member .social a:hover {
+    color: #1bbd36;
+  }
+  .team .member .social i {
+    font-size: 18px;
+    margin: 0 2px;
+  }
+  .team .member .member-info {
+    padding: 25px 15px;
+  }
+  .team .member .member-info h4 {
+    font-weight: 700;
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: #111;
+  }
+  .team .member .member-info span {
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+    color: #b4aca8;
+  }
+  .team .member .member-info p {
+    font-style: italic;
+    font-size: 14px;
+    line-height: 26px;
+    color: #847872;
+  }
+  .team .member:hover .social {
+    opacity: 1;
+  }
+
+
+  /* Example styles for the footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+
+/*--------------------------------------------------------------
+# ADD PRODUCT
+--------------------------------------------------------------*/
+
+.prod{
+  /* border: 3px solid black ; */
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  
+}
+
+
+
+.text-texarea{
+  width: 350px;
+  border-radius: 20px;
+}
+
+.input-form-prod{
+  width: 350px;
+  border-radius: 10px;
+  border: 0;
+  outline: none;
+}
+
+.prod-label{
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+}
+
+#productCategory ,#productImage, #AddButton{
+  position: relative;
+  left: 130px;
+}
+
+
+/* Style the product card */
+.product-card {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+}
+
+.product-card img {
+  max-width: 100%;
+}
+
+/* Style the "Add to Cart" button */
+.product-card button {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.product-card button:hover {
+  background-color: #0056b3;
+}

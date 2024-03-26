@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <!-- START OF NAVBAR -->
+<section class="header">
+    <nav>
+        
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-window-close" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="/home">HOME</a></li>
+                <li><a href="">PROFILE</a></li>
+                <li><a href="">PRODUCTS</a></li>
+                <li><a href="">MY CART</a></li>
+                <li><a href="">MY ORDERS</a></li>
+                <li><a href="">HISTORY</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+    <!-- END OF NAVBAR -->.
+    
+
+      <div class="container">
+        <h2>Products</h2>
+        
+        <!-- Cart Items -->
+        
+        <div class="row">
+            <% products.forEach(products => { %>
+            <!-- Cart Product 1 -->
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="/images/<%= products.imagename %>" alt="Product 1" class="product-image">
+                </div>
+            </div>
+            
+            <!-- Cart Product 1 Information -->
+            <div class="col-md-8">
+                <div class="product-info">
+                    <h3><%= products.prodname %></h3>
+                    <p><%= products.description %></p>
+                    <p><%= products.price %></p>
+                    
+                    <button>Add to cart</button>
+                </div>
+            </div>
+            <% }) %>
+            <!-- Repeat the above structure for other cart products -->
+            
+            <!-- Cart Product 2 -->
+            
+        </div>
+    </div>
+
+<a class="hero-btn" href="/logout" role="button">Log Out</a>
+
+        
+    </section>
+    <!-- Footer -->
+<footer class="footer text-center">
+    <p>&copy; 2023 E-commerce Store</p>
+</footer>
+</body>
+</html>

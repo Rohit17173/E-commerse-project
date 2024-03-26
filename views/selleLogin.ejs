@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="header">
+    <section class="header">
+        <nav>
+            
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-window-close" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="/">HOME</a></li>
+                <li><a href="/login">LOGIN</a></li>
+                <li><a href="/register">REGISTER</a></li>
+                <li><a href="/loginSel">SELLER LOGIN</a></li>
+                <li><a href="/registerSel">SELLER RGISTER</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <!-- END OF NAVBAR -->.
+    
+
+        <div class="form-body">
+            <!-- <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()">LOG IN</button>
+                <button type="button" class="toggle-btn" onclick="register()">REGISTER</button>
+            </div> -->
+
+            <!-- <div class="social-icons">
+                <img src="./img/fb.png">
+                <img src="./img/gp.png">
+                <img src="./img/tw.png">
+            </div> -->
+            <form id="login" class="input-grp" action="/Selogin" method="post">
+                <input type="text" class="input-field" placeholder="User Id" name="username" Required>
+                <input type="password" class="input-field" placeholder="Enter Password" name="password" Required>
+                <input type="checkbox" class="check-box"><span>I agree to the terms & Conditions</span>
+                <button type="submit" class="submit-btn">LOGIN</button>
+            </form>
+            <!-- <form id="register" class="input-grp">
+                <input type="text" class="input-field" placeholder="User Id" Required>
+                <input type="email" class="input-field" placeholder="E Mail Id" Required>
+                <input type="password" class="input-field" placeholder="Enter Password" Required>
+                <input type="checkbox" class="check-box"><span>Remember Password</span>
+                <button type="submit" class="submit-btn">LOGIN</button>
+            </form> -->
+        </div>
+         
+    </section>
+   
+</body>
+</html>

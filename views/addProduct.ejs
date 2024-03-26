@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <!-- START OF NAVBAR -->
+<section class="header">
+    <nav>
+        
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-window-close" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="/home">HOME</a></li>
+                <li><a href="">PROFILE</a></li>
+                <li><a href="">PRODUCTS</a></li>
+                <li><a href="">MY CART</a></li>
+                <li><a href="">MY ORDERS</a></li>
+                <li><a href="">HISTORY</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+    <!-- END OF NAVBAR -->.
+
+    
+<div class="prod">
+    <div class="productform">
+    <form action="addProduct" method="post" enctype="multipart/form-data">
+        <label for="productName" class="prod-label">Product Name:</label>
+        <input type="text" id="productName" name="productName" class="input-form-prod" required><br><br>
+
+        <label for="productDescription" class="prod-label">Product Description:</label>
+        <textarea id="productDescription" name="productDescription" class="text-texarea" required></textarea><br><br>
+
+        <label for="productPrice" class="prod-label">Price:</label>
+        <input type="text" id="productPrice" name="productPrice" class="input-form-prod" required><br><br>
+        
+        <label for="productCategory" class="prod-label">Product Category:</label>
+        <select id="productCategory" name="productCategory" required>
+            <option value="Mobile">Mobile</option>
+           <option value="Laptop">Laptop</option>
+              <option value="Fashion">Fashion</option>
+          </select><br><br>
+        
+        <label for="productImage" class="prod-label">Product Image:</label>
+        <input type="file" id="productImage" name="productImage" accept="image/*" required><br><br>
+
+        <input type="hidden" name="sellerId" value="<%= user.sid %>">
+
+        <input type="submit" id="AddButton" value="Add Product">
+    </form>
+    
+</div>
+</div>
+
+<!-- <a class="hero-btn" href="/logout" role="button">Log Out</a> -->
+
+        
+    </section>
+    <!-- Footer -->
+<footer class="footer text-center">
+    <p>&copy; 2023 E-commerce Store</p>
+</footer>
+</body>
+</html>

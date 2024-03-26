@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- START OF NAVBAR -->
+<section class="header">
+    <nav>
+        
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-window-close" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="/home">HOME</a></li>
+                <li><a href="">PROFILE</a></li>
+                <li><a href="/home/myproduct">MY PRODUCTS</a></li>
+                <li><a href="">MY CART</a></li>
+                <li><a href="">MY ORDERS</a></li>
+                <li><a href="">HISTORY</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+    <!-- END OF NAVBAR -->.
+
+    <div class="text-box">
+        <h1>Add Your Product</h1>
+        
+          <a href="/selhome/addproduct" class="hero-btn">ADD PRODUCT</a>
+        
+      </div>
+
+      
+      
+<!-- Featured Products Section -->
+<div class="container">
+    <h2 class="text-center">Featured Products SELLER</h2>
+    <br><br>
+    <div class="row">
+        <!-- Product Container 1 -->
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img src="/img/4.webp" class="card-img-top" alt="Product 1">
+                <div class="card-body">
+                    <h5 class="card-title">mobiles</h5>
+                    <p class="card-text">Description of Product 1 goes here.</p>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Product Container 2 -->
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img src="/img/2.jpg" class="card-img-top" alt="Product 2">
+                <div class="card-body">
+                    <h5 class="card-title">laptops</h5>
+                    <p class="card-text">Description of Product 2 goes here.</p>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Product Container 3 -->
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img src="/img/3.jpg" class="card-img-top" alt="Product 3">
+                <div class="card-body">
+                    <h5 class="card-title">fashion</h5>
+                    <p class="card-text">Description of Product 3 goes here.</p>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<% if (user) { %>
+    <h1><%= user.sid %></h1>
+  <% } %>
+
+<a class="hero-btn" href="/logout" role="button">Log Out</a>
+
+        
+    </section>
+    <!-- Footer -->
+<footer class="footer text-center">
+    <p>&copy; 2023 E-commerce Store</p>
+</footer>
+</body>
+</html>
