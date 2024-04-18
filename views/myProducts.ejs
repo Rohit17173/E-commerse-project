@@ -34,25 +34,38 @@
         <!-- Cart Items -->
         
         <div class="row">
-            <% products.forEach(products => { %>
+            <% for(let product of products){ %>
             <!-- Cart Product 1 -->
             <div class="col-md-4">
                 <div class="product-card">
-                    <img src="/images/<%= products.imagename %>" alt="Product 1" class="product-image">
+                    <img src="/images/<%= product.imagename %>" alt="Product 1" class="product-image">
                 </div>
             </div>
             
             <!-- Cart Product 1 Information -->
             <div class="col-md-8">
                 <div class="product-info">
-                    <h3><%= products.prodname %></h3>
-                    <p><%= products.description %></p>
-                    <p><%= products.price %></p>
                     
-                    <button>Add to cart</button>
+                    <h5 id="name<%=product.pid%>"><%= product.prodname %></h5>
+                    <p id="desc<%=product.pid%>"><%= product.description %></p>
+                    <p id="price<%=product.pid%>"><%= product.price %></p>
+                    <form class="edit-form hidden" action="/edit" method="post">
+                        <input type="hidden" name="updatedItemId" value="<%= product.pid %>">
+                        <input id="myinputname<%=product.pid%>" type="text" name="updatedItemTitle" value="<%= product.prodname %>" autocomplete="off"
+                            autofocus="true" hidden/> <br>
+                        <input id="myinputdesc<%=product.pid%>" type="text" name="updatedItemTitle" value="<%= product.description %>" autocomplete="off"
+                            autofocus="true" hidden/><br>
+                        <input id="myinputprice<%=product.pid%>" type="text" name="updatedItemTitle" value="<%= product.price %>" autocomplete="off"
+                            autofocus="true" hidden/><br>
+                        
+                    </form>
+                    <button id="mysave<%=product.pid%>" class="edit" onclick="handler('<%=product.pid%>')" hidden>Save</button>
+                    <button id="myedit<%=product.pid%>" class="edit" onclick="handler('<%=product.pid%>')">EDIT</button>
+                    
+                    <button id="mydelete<%=product.pid%>" class="edit" onclick="handler('<%=product.pid%>')">DELETE</button>
                 </div>
             </div>
-            <% }) %>
+            <% } %>
             <!-- Repeat the above structure for other cart products -->
             
             <!-- Cart Product 2 -->
@@ -68,5 +81,22 @@
 <footer class="footer text-center">
     <p>&copy; 2023 E-commerce Store</p>
 </footer>
+<script>
+    function handler(pid) {
+        console.log(pid);
+      document.getElementById("price" + pid).setAttribute("hidden", true);
+      document.getElementById("name" + pid).setAttribute("hidden", true)
+      document.getElementById("desc" + pid).setAttribute("hidden", true)
+      document.getElementById("myedit" + pid).setAttribute("hidden", true)
+      document.getElementById("mydelete" + pid).setAttribute("hidden", true)
+
+      document.getElementById("myinputname" + pid).removeAttribute("hidden")
+      document.getElementById("myinputdesc" + pid).removeAttribute("hidden")
+      document.getElementById("myinputprice" + pid).removeAttribute("hidden")
+      document.getElementById("mysave" + pid).removeAttribute("hidden")
+
+      
+    }
+  </script>
 </body>
 </html>
